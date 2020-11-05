@@ -1,0 +1,21 @@
+{
+  "rows": 4320,
+  "stat_col": 9,
+  "headline": 9,
+  "distribution_size": 51,
+  "distribution_min": 0,
+  "distribution_max": 50,
+  "distribution_cut_flag": true,
+  "ifname_path": "./MSDnonAffine/",
+  "ifname_prefix": "MSDnonAffine.",
+  "ifname_postfix": null,
+  "ofname_path": "./distribution/",
+  "ofname_prefix": "test",
+  "ofname_posfix": null,
+  "per_step_fname_path": "./",
+  "per_step_fname": "stat.csv",
+
+  "start_step": 4800,
+  "stop_step": 67200,
+  "delta_step": 4800
+}
