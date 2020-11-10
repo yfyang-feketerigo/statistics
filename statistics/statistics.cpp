@@ -57,7 +57,7 @@ Distribution Statistics::compute_distribution(size_t size)
 	_dstbt.distribution.resize(size, 0);
 	for (size_t i = 0; i < data.size(); i++)
 	{
-		size_t index = floor((data[i] - minimum) / delta); //将数据最小值对齐至0，再进行分布计算
+		size_t index = floor((data[i] - _dstbt.min) / delta); //将数据最小值对齐至0，再进行分布计算
 		_dstbt.distribution[index]++;
 	}
 	distribution = _dstbt;
@@ -76,7 +76,7 @@ Distribution Statistics::compute_distribution(size_t size, double min, double ma
 	{
 		if (data[i] < max && data[i] >= min)
 		{
-			size_t index = floor((data[i] - minimum) / delta); //将数据下限对齐至0，再进行分布计算
+			size_t index = floor((data[i] - _dstbt.min) / delta); //将数据下限对齐至0，再进行分布计算
 			_dstbt.distribution[index]++;
 		}
 		else

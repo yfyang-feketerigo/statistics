@@ -14,8 +14,8 @@ struct Distribution：分布结构，储存分布数据类型。
 #include <algorithm>	
 struct Distribution
 {
-	double min = 0; //数据中的最小值
-	double max = 0; //数据中的最大值
+	double min = 0; //分布下限
+	double max = 0; //分布上限
 	std::vector<double> distribution; //分布
 	void normalization() //归一化
 	{
