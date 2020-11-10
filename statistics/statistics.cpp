@@ -25,7 +25,7 @@ Statistics::Statistics(std::vector<double> _data, bool flag_variance, bool flag_
 		variance = 0;
 		for (size_t i = 0; i < data.size(); i++)
 		{
-			variance = std::pow(data[i] - mean, 2);
+			variance += std::pow(data[i] - mean, 2);
 		}
 		variance /= data.size();
 	}

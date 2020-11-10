@@ -1,9 +1,9 @@
 /*
-
 class Statistics :统计类，用于统计一维数据，可计算：
 	最大值最小值，均值，中位数，分布
-
-	struct Distribution：分布结构，储存分布数据类型。
+	该类在调用构造函数时自动计算最大值、最小值、中位数
+	计算分布需要调用方法compute_distribution
+struct Distribution：分布结构，储存分布数据类型。
 */
 #pragma once
 #include <vector>
@@ -30,7 +30,7 @@ struct Distribution
 		}
 		return;
 	}
-	void to_csv(std::string fname, std::string seq = " "); //输出到文件
+	void to_csv(std::string fname, std::string seq = " "); //输出到文件，seq指明分割符
 };
 
 class Statistics
@@ -43,7 +43,7 @@ private:
 	double minimum = 0; //最小值
 	double variance = 0; //方差
 	Distribution distribution; //分布
-	size_t out_range_counter = 0;
+	size_t out_range_counter = 0;//在使用指定范围的统计分布时，计量超过范围的数据数量
 
 public:
 	Statistics(std::vector<double> _data, bool flag_variance = true, bool flag_median = true); //构造函数
@@ -55,6 +55,7 @@ public:
 	inline double get_maxim() { return maxim; } //返回最大值
 	inline double get_minimum() { return minimum; } //返回最小值
 	inline double get_variance() { return variance; } //返回方差
+	inline double get_out_range_counter() { return out_range_counter; }//返回超范围数据数
 	inline std::vector<double> get_data() { return data; } //返回原始数据
 	inline Distribution get_distribution() { return distribution; } //返回分布
 	inline void sort() //从小到大排序
