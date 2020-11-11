@@ -43,11 +43,11 @@ int main()
 		std::string ofname_postfix = root["ofname_postfix"].asString();
 		std::string psfname_path = root["per_step_fname_path"].asString();
 		std::string psfname = root["per_step_fname"].asString();
-
-		size_t start_step = root["start_step"].asLargestUInt();
-		size_t stop_step = root["stop_step"].asLargestUInt();
+		size_t start_moment = root["start_moment"].asLargestUInt();
+		size_t moment_number = root["moment_number"].asLargestUInt();
 		size_t delta_step = root["delta_step"].asLargestUInt();
-
+		size_t stop_step = moment_number * delta_step;
+		size_t start_step = start_moment * delta_step;
 		throw_wrong_path(ifname_path);
 		mkdir(ofname_path);
 		mkdir(psfname_path);

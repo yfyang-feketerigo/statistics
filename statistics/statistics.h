@@ -11,7 +11,8 @@ struct Distribution：分布结构，储存分布数据类型。
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <algorithm>	
+#include <algorithm>
+#include <cmath>
 struct Distribution
 {
 	double min = 0; //分布下限

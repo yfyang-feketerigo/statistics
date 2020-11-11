@@ -15,7 +15,7 @@
   "per_step_fname_path": "./",
   "per_step_fname": "stat.csv",
 
-  "start_step": 4800,
-  "stop_step": 67200,
+  "start_moment": 1,
+  "moment_number": 1,
   "delta_step": 4800
 }
