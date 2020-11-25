@@ -156,6 +156,7 @@
     <ClInclude Include="statistics.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="aveDistribution.py" />
     <None Include="MSDnonAffine\MSDnonAffine.14400" />
     <None Include="MSDnonAffine\MSDnonAffine.19200" />
     <None Include="MSDnonAffine\MSDnonAffine.24000" />
@@ -170,6 +171,7 @@
     <None Include="MSDnonAffine\MSDnonAffine.62400" />
     <None Include="MSDnonAffine\MSDnonAffine.67200" />
     <None Include="MSDnonAffine\MSDnonAffine.9600" />
+    <None Include="STAT.sh" />
     <None Include="stat_settings.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

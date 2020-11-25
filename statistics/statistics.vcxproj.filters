@@ -79,5 +79,11 @@
     <None Include="MSDnonAffine\MSDnonAffine.67200">
       <Filter>资源文件</Filter>
     </None>
+    <None Include="aveDistribution.py">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="STAT.sh">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>
